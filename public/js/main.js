@@ -5,11 +5,11 @@
     function getStatusBadge(status) {
       switch (status) {
         case "stopped":
-          return `<span class="badge badge-danger">${status}</span>`;
+          return `<span class="badge bg-danger">${status}</span>`;
         case "online":
-          return `<span class="badge badge-success">${status}</span>`;
+          return `<span class="badge bg-success">${status}</span>`;
         default:
-          return `<span class="badge badge-default">${status}</span>`;
+          return `<span class="badge bg-default">${status}</span>`;
       }
     }
 
@@ -34,7 +34,7 @@
     async function updateMinersStatus() {
       const response = await fetch('/miners');
       const miners = await response.json();
-
+      console.log(miners);
       const trs = [];
       for (const miner of miners) {
         trs.push(`
