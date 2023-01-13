@@ -1,16 +1,27 @@
-# ts-rabbitMQ
+# PM2 Monitoramento Web
 
-Source code for [How To Create A Simple Web UI To Manage NodeJS Process With PM2 API?](https://hoangdv.medium.com/how-to-create-a-simple-web-ui-to-manage-nodejs-process-with-pm2-api-132986fe3fed?sk=709b9762967baaf659ce0f881005a708)
+>Plataforma Web para monitoramento PM2 em tempo real.
 
-## Develop
+>Botões de iniciar, reiniciar e parar o serviço.
 
-### Install dependencies
+>Uso de RAM e CPU atualizando em tempo real.
+
+>Console Log dos serviços atualizando em tempo real.
+
+# 🛠️ Instalar
+- :arrow_down: Baixar os arquivos ```git clone https://github.com/vidagostini1998/pm2-monit-web.git```
+- Adicionar o nome dos serviços no arquivo ```src\pm2Lib.ts``` na linha 18 ```private readonly MINERS = ['NOME_DO_SERVIÇO_PM2','NOME_DO_SERVIÇO_PM2_2'];```:
+
+![image](https://user-images.githubusercontent.com/94183727/212323879-f78c453c-27eb-47e8-b8eb-65ea15522a9d.png)
+
+- Instalar NodeJS https://nodejs.org/en/
+- Instalar dependencias:
 
 ```shell
 npm ci
 ```
 
-### Start dev server
+- Start dev server
 
 ```shell
 npm run dev
