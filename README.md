@@ -27,4 +27,4 @@ npm ci
 npm run dev
 ```
 
-- Acessar no link ```localhost:3000``` ou ``IP_DA_MAQUINA:3000```
+- Acessar no link ```localhost:3000``` ou ```IP_DA_MAQUINA:3000```
