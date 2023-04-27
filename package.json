@@ -4,14 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "ts-node-dev --respawn --transpile-only ./src/app.ts"
+    "dev": "ts-node-dev --respawn --transpile-only ./src/app.ts",
+    "start": "nodemon dist/app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
+    "nodemon": "^2.0.22",
     "pm2": "^5.2.2",
     "socket.io": "^4.5.4"
   },
