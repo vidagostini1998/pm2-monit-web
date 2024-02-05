@@ -11,9 +11,6 @@
 # 🛠️ Instalar
 
 - :arrow_down: Baixar os arquivos `git clone https://github.com/vidagostini1998/pm2-monit-web.git`
-- Adicionar o nome dos serviços no arquivo `src\pm2Lib.ts` na linha 18 `private readonly MINERS = ['NOME_DO_SERVIÇO_PM2','NOME_DO_SERVIÇO_PM2_2','PM2-Monit-Web'];`:
-
-![image](https://user-images.githubusercontent.com/94183727/212323879-f78c453c-27eb-47e8-b8eb-65ea15522a9d.png)
 
 - Instalar NodeJS https://nodejs.org/en/
 - Instalar dependencias:
@@ -22,16 +19,12 @@
 npm ci
 ```
 
-- Build
+- Criar .env a partir do .env.example
 
 ```shell
-npm run build
-```
-
-- Start server
-
-```shell
-npm start
+PORT = PORTA
+HOST = HOST
+MINERS = "NOME_SERVIÇO_1, NOME_SERVIÇO_2, PM2-Monit-Web"
 ```
 
 - Build
