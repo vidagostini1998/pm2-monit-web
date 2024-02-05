@@ -1,6 +1,7 @@
 import pm2, { Proc, ProcessDescription, StartOptions } from 'pm2';
 import { promisify } from 'util';
 import { EventEmitter } from 'events';
+require('dotenv').config();
 
 export interface IProcessOutLog {
   data: string;
@@ -15,7 +16,7 @@ export interface IProcessOutLog {
 
 class Pm2Lib {
   private readonly SCRIPT_PATH = process.env.SCRIPT_PATH;
-  private readonly MINERS = ['whaticket-banckend', 'whaticket-frontend'];
+  private readonly MINERS = String(process.env.MINERS).split(", ");
 
   private bus: EventEmitter | undefined;
 

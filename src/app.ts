@@ -2,6 +2,8 @@ import express from 'express';
 import pm2Lib from './pm2Lib';
 import socketIO from './socketIO';
 
+require('dotenv').config();
+
 const app = express();
 
 app.use(express.static('public'));
@@ -31,16 +33,17 @@ app.put('/miners/:filename/:action(start|restart|stop)', async (req, res) => {
       default:
         return res.status(400).json({ message: `${action} is not supported!` });
     }
-  } catch (error) {
+  } catch (error:any) {
     res.status(500).json({ message: (error[0] || error).message });
   }
 });
 
 
 const PORT = process.env.PORT || 3000;
+const HOST = process.env.HOST || 'localhost';
 
-const httpServer = app.listen(PORT, () => {
-  console.log(`[Server] Listening on :${PORT}`);
+const httpServer = app.listen(Number(PORT), HOST,() => {
+  console.log(`[Server] Listening on ${HOST}:${PORT}`);
 });
 
 socketIO.init(httpServer);
