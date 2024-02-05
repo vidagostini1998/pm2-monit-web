@@ -21,10 +21,16 @@
 npm ci
 ```
 
-- Start dev server
+- Build
 
 ```shell
-npm run dev
+npm run build
+```
+
+- Start server
+
+```shell
+npm start
 ```
 
 - Acessar no link ```localhost:3000``` ou ```IP_DA_MAQUINA:3000```
